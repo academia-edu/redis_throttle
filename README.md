@@ -3,7 +3,7 @@
 Ensures method cannot run more than every x milliseconds.
 
     class A
-      extend RedisThrottling
+      extend RedisThrottle
       
       def run
         do something interesting
