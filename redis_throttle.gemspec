@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'redis_throttle/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "redis_throttle"
+  gem.name          = "redis_throttling"
   gem.version       = RedisThrottle::VERSION
   gem.authors       = ["Ryan Lower", "Ryan Fitzgerald", "Dmitri Akatov"]
   gem.email         = ["ryan@academia.edu", "rfitz@academia.edu", "dmitri@academia.edu"]
