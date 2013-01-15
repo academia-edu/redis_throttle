@@ -27,6 +27,14 @@ Or install it yourself as:
     $ gem install redis_throttle
 
 
+## Usage
+
+Configure to use your redis
+
+    RedisThrottle.configure do |config|
+      config.redis = Redis.new(host: '1.2.3.4', port: 5678)
+    end
+
 
 ## Contributing
 
