@@ -7,3 +7,7 @@ require "minitest/pride"
 require "mocha/setup"
 
 require "redis_throttle"
+
+RedisThrottle.configure do |config|
+  config.redis = Redis.new
+end
