@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = RedisThrottle::VERSION
   gem.authors       = ["Ryan Lower", "Ryan Fitzgerald", "Dmitri Akatov"]
   gem.email         = ["ryan@academia.edu", "rfitz@academia.edu", "dmitri@academia.edu"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Ensures method cannot run more than every x milliseconds}
+  gem.summary       = %q{Ensures method cannot run more than every x milliseconds}
   gem.homepage      = ""
   gem.license       = "MIT"
 
