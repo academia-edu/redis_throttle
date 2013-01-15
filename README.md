@@ -1,6 +1,16 @@
 # RedisThrottle
 
-TODO: Write a gem description
+Ensures method cannot run more than every x milliseconds.
+
+    class A
+      extend RedisThrottling
+      
+      def run
+        do something interesting
+      end
+      redis_throttle :run, 500
+    end
+
 
 ## Installation
 
@@ -16,9 +26,7 @@ Or install it yourself as:
 
     $ gem install redis_throttle
 
-## Usage
 
-TODO: Write usage instructions here
 
 ## Contributing
 
