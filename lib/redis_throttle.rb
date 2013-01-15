@@ -1,5 +1,14 @@
+require 'redis'
 require "redis_throttle/version"
 
 module RedisThrottle
-  # Your code goes here...
+
+  def self.configure
+    yield self
+  end
+
+  def self.redis=(server)
+    @redis = server
+  end
+
 end
