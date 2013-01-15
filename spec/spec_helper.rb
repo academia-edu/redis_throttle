@@ -8,6 +8,8 @@ require "mocha/setup"
 
 require "redis_throttle"
 
+REDIS = Redis.new
+
 RedisThrottle.configure do |config|
-  config.redis = Redis.new
+  config.redis = REDIS
 end
