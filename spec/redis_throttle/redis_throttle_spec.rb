@@ -30,7 +30,7 @@ module RedisThrottle
       begin
         a = A.new
         a.run
-        lock_pttl.must_equal 50
+        lock_pttl.must_be :<=, 50
       ensure
         clear_lock
       end
