@@ -11,8 +11,13 @@ module RedisThrottle
     @redis = server
   end
 
+  def self.key_prefix=(prefix)
+    @key_prefix = prefix
+  end
+
   def self.key(klass, method)
-    "RedisThrottle:#{klass}##{method}"
+    prefix = @key_prefix || 'RedisThrottle'
+    "#{prefix}:#{klass}##{method}"
   end
 
   # @param [Symbol] method name of the method to throttle
