@@ -3,35 +3,6 @@ require 'spec_helper'
 module RedisThrottle
   describe RedisThrottle do
 
-    class TriedToSleep < RuntimeError
-    end
-
-    class ::A
-      extend RedisThrottle
-      attr_reader :i
-
-      def initialize
-        @i = 0
-      end
-
-      def run
-        @i += 1
-      end
-      redis_throttle :run, 50
-
-      def sleep(*)
-        raise TriedToSleep
-      end
-    end
-
-    def clear_lock
-      REDIS.del RedisThrottle.key('A', 'run')
-    end
-
-    def lock_pttl
-      REDIS.pttl RedisThrottle.key('A', 'run')
-    end
-
     it "shouldn't run again while the lock is taken" do
       begin
         a = A.new
