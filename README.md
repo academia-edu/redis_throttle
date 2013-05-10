@@ -8,7 +8,7 @@ Ensures method cannot run more than every x milliseconds.
       def run
         do something interesting
       end
-      redis_throttle :run, 500
+      redis_throttling :run, 500
     end
 
 
@@ -16,7 +16,7 @@ Ensures method cannot run more than every x milliseconds.
 
 Add this line to your application's Gemfile:
 
-    gem 'redis_throttle'
+    gem 'redis_throttling'
 
 And then execute:
 
@@ -24,7 +24,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install redis_throttle
+    $ gem install redis_throttling
 
 
 ## Usage
